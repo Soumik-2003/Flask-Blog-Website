@@ -37,8 +37,8 @@ app.config['SECRET_KEY'] = os.environ.get('FLASK_KEY')
 ckeditor = CKEditor(app)
 Bootstrap5(app)
 
-email = os.getenv('e_mail')
-pass_email = os.getenv('pass_key')
+email = os.environ.get('e_mail')
+pass_email = os.environ.get('pass_key')
 
 def send_email(name,to_mail,phone,message):
     with smtplib.SMTP("smtp.gmail.com", 587) as server:
