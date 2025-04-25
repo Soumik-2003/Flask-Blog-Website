@@ -2,6 +2,8 @@
 
 A feature-rich **blog platform built with Flask**, offering secure user authentication, comment systems, admin controls, and a clean, modern design with Gravatar avatars. Ideal for learning full-stack development using Python.
 
+## 🌐 Live Demo: https://flask-blog-website-roml.onrender.com/
+
 ---
 
 ## 🚀 Features
@@ -48,6 +50,14 @@ A feature-rich **blog platform built with Flask**, offering secure user authenti
 
 ---
 
+## 🌐 Deployment
+
+- Deployed on Render.com using Gunicorn as the WSGI server
+- Environment variables loaded using .env or Render's environment settings
+- CSRF protection and secrets handled securely via FLASK_KEY
+
+---
+
 ## 💡 Future Improvements
 
 - 👍 Like/Dislike system for posts and comments  
@@ -65,7 +75,7 @@ A feature-rich **blog platform built with Flask**, offering secure user authenti
    git clone https://github.com/your-username/Flask-Blog-Website.git
    cd Flask-Blog-Website
    pip install -r requirements.txt
-   python app.py
+   python main.py
 
 ---
 
