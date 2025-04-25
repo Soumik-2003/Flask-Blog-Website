@@ -30,7 +30,7 @@ This will install the packages from the requirements.txt for this project.
 
 if os.environ.get("FLASK_ENV") != "production":
     from pathlib import Path
-    env_path = Path(__file__).parent / "enviro.env"
+    env_path = Path(__file__).parent / "environ.env"
     load_dotenv(env_path)
 
 app = Flask(__name__)
