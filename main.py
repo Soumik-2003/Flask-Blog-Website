@@ -13,7 +13,6 @@ import hashlib
 from dotenv import load_dotenv
 import os
 import smtplib
-from pathlib import Path
 
 
 '''
@@ -29,8 +28,10 @@ pip3 install -r requirements.txt
 This will install the packages from the requirements.txt for this project.
 '''
 
-env_path = Path(__file__).parent / "enviro.env"
-load_dotenv(env_path)
+if os.environ.get("FLASK_ENV") != "production":
+    from pathlib import Path
+    env_path = Path(__file__).parent / "enviro.env"
+    load_dotenv(env_path)
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get('FLASK_KEY')
